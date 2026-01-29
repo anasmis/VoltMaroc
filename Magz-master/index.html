@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="Magazine en ligne - Actualités, lifestyle et culture">
+		<meta name="author" content="Magazine">
+		<meta name="keyword" content="magazine, actualités, news, lifestyle, culture, technologie">
+		<!-- Shareable -->
+		<meta property="og:title" content="Magazine - Votre source d'actualités" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="#" />
+		<meta property="og:image" content="images/preview.png" />
+		<title>Magazine &mdash; Actualités et Culture</title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="scripts/bootstrap/bootstrap.min.css">
+		<!-- IonIcons -->
+		<link rel="stylesheet" href="scripts/ionicons/css/ionicons.min.css">
+		<!-- Toast -->
+		<link rel="stylesheet" href="scripts/toast/jquery.toast.min.css">
+		<!-- OwlCarousel -->
+		<link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="scripts/owlcarousel/dist/assets/owl.theme.default.min.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="scripts/magnific-popup/dist/magnific-popup.css">
+		<link rel="stylesheet" href="scripts/sweetalert/dist/sweetalert.css">
+		<!-- Custom style -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/skins/all.css">
+		<link rel="stylesheet" href="css/demo.css">
+	</head>
+
+	<body class="skin-blue">
+		<header class="primary">
+			<div class="firstbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<div class="brand">
+								<a href="index.html">
+									<img src="images/logo.png" alt="Magz Logo">
+								</a>
+							</div>						
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<form class="search" autocomplete="off">
+								<div class="form-group">
+									<div class="input-group">
+										<input type="text" name="q" class="form-control" placeholder="Rechercher des articles...">									
+										<div class="input-group-btn">
+											<button class="btn btn-primary"><i class="ion-search"></i></button>
+										</div>
+									</div>
+								</div>
+								<div class="help-block">
+									<div>Populaire:</div>
+									<ul>
+										<li><a href="#">Véhicules Électriques</a></li>
+										<li><a href="#">Bornes de Recharge</a></li>
+										<li><a href="#">Autonomie</a></li>
+										<li><a href="#">Tesla</a></li>
+										<li><a href="#">Mobilité Durable</a></li>
+									</ul>
+								</div>
+							</form>								
+						</div>
+						<div class="col-md-3 col-sm-12 text-right">
+							<ul class="nav-icons">
+								<li><a href="register.html"><i class="ion-person-add"></i><div>S'inscrire</div></a></li>
+								<li><a href="login.html"><i class="ion-person"></i><div>Connexion</div></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Start nav -->
+			<nav class="menu">
+				<div class="container">
+					<div class="brand">
+						<a href="#">
+							<img src="images/logo.png" alt="Magz Logo">
+						</a>
+					</div>
+					<div class="mobile-toggle">
+						<a href="#" data-toggle="menu" data-target="#menu-list"><i class="ion-navicon-round"></i></a>
+					</div>
+					<div class="mobile-toggle">
+						<a href="#" data-toggle="sidebar" data-target="#sidebar"><i class="ion-ios-arrow-left"></i></a>
+					</div>
+					<div id="menu-list">
+						<ul class="nav-list">
+							<li class="for-tablet nav-title"><a>Menu</a></li>
+							<li class="for-tablet"><a href="login.html">Connexion</a></li>
+							<li class="for-tablet"><a href="register.html">S'inscrire</a></li>
+							<li><a href="category.html">Actualités</a></li>
+							<li class="dropdown magz-dropdown">
+								<a href="category.html">Catégories <i class="ion-ios-arrow-right"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="index.html">Accueil</a></li>
+									<li class="dropdown magz-dropdown">
+										<a href="#">Compte <i class="ion-ios-arrow-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="login.html">Connexion</a></li>
+											<li><a href="register.html">S'inscrire</a></li>
+											<li><a href="forgot.html">Mot de passe oublié</a></li>
+											<li><a href="reset.html">Réinitialiser</a></li>
+										</ul>
+									</li>
+									<li><a href="category.html">Catégories</a></li>
+									<li><a href="single.html">Article</a></li>
+									<li><a href="page.html">Page</a></li>
+									<li><a href="search.html">Recherche</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li class="dropdown magz-dropdown">
+										<a href="#">Erreur <i class="ion-ios-arrow-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="403.html">403</a></li>
+											<li><a href="404.html">404</a></li>
+											<li><a href="500.html">500</a></li>
+											<li><a href="503.html">503</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown magz-dropdown"><a href="#">Mobilité Électrique <i class="ion-ios-arrow-right"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="category.html">Véhicules Électriques</a></li>
+									<li class="dropdown magz-dropdown"><a href="category.html">Infrastructure <i class="ion-ios-arrow-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="category.html">Bornes de Recharge</a></li>
+											<li class="dropdown magz-dropdown"><a href="category.html">Solutions <i class="ion-ios-arrow-right"></i></a>
+												<ul class="dropdown-menu">
+													<li><a href="category.html">Recharge Rapide</a></li>
+													<li><a href="category.html">Recharge Domestique</a></li>
+													<li><a href="category.html">Recharge Publique</a></li>
+												</ul>
+											</li>
+											<li><a href="category.html">Installation</a>
+										</ul>
+									</li>
+									<li><a href="category.html">Subventions</a></li>
+									<li class="dropdown magz-dropdown"><a href="#">Marques <i class="ion-ios-arrow-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="category.html">Tesla</a></li>
+											<li class="dropdown magz-dropdown"><a href="category.html">Marques Européennes <i class="ion-ios-arrow-right"></i></a>
+												<ul class="dropdown-menu">
+													<li class="dropdown magz-dropdown"><a href="category.html">Françaises <i class="ion-ios-arrow-right"></i></a>
+														<ul class="dropdown-menu">
+															<li><a href="#">Renault</a></li>
+															<li><a href="#">Peugeot</a></li>
+															<li><a href="#">Citroën</a></li>
+															<li><a href="#">DS</a></li>
+														</ul>
+													</li>
+													<li><a href="category.html">Allemandes</a></li>
+												</ul>
+											</li>
+											<li><a href="category.html">Chinoises</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown magz-dropdown magz-dropdown-megamenu"><a href="#">En Vedette <i class="ion-ios-arrow-right"></i> <div class="badge">Nouveau</div></a>
+								<div class="dropdown-menu megamenu">
+									<div class="megamenu-inner">
+										<div class="row">
+											<div class="col-md-3">
+												<div class="row">
+													<div class="col-md-12">
+														<h2 class="megamenu-title">Tendances</h2>
+													</div>
+												</div>
+												<ul class="vertical-menu">
+													<li><a href="#"><i class="ion-ios-circle-outline"></i> Nouvelles Tesla Model Y au Maroc</a></li>
+													<li><a href="#"><i class="ion-ios-circle-outline"></i> Subventions gouvernementales 2025</a></li>
+													<li><a href="#"><i class="ion-ios-circle-outline"></i> Innovation technologique</a></li>
+													<li><a href="#"><i class="ion-ios-circle-outline"></i> Autonomie en hiver</a></li>
+													<li><a href="#"><i class="ion-ios-circle-outline"></i> Comparatif des VE</a></li>
+												</ul>
+											</div>
+											<div class="col-md-9">
+												<div class="row">
+													<div class="col-md-12">
+														<h2 class="megamenu-title">Articles Récents</h2>
+													</div>
+												</div>
+												<div class="row">
+													<article class="article col-md-4 mini">
+														<div class="inner">
+															<figure>
+																<a href="single.html">
+																	<img src="images/news/img10.jpg" alt="Sample Article">
+																</a>
+															</figure>
+															<div class="padding">
+																<div class="detail">
+																	<div class="time">December 10, 2016</div>
+																	<div class="category"><a href="category.html">Healthy</a></div>
+																</div>
+																<h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+															</div>
+														</div>
+													</article>
+													<article class="article col-md-4 mini">
+														<div class="inner">
+															<figure>
+																<a href="single.html">
+																	<img src="images/news/img11.jpg" alt="Sample Article">
+																</a>
+															</figure>
+															<div class="padding">
+																<div class="detail">
+																	<div class="time">December 13, 2016</div>
+																	<div class="category"><a href="category.html">Lifestyle</a></div>
+																</div>
+																<h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+															</div>
+														</div>
+													</article>
+													<article class="article col-md-4 mini">
+														<div class="inner">
+															<figure>
+																<a href="single.html">
+																	<img src="images/news/img14.jpg" alt="Sample Article">
+																</a>
+															</figure>
+															<div class="padding">
+																<div class="detail">
+																	<div class="time">December 14, 2016</div>
+																	<div class="category"><a href="category.html">Travel</a></div>
+																</div>
+																<h2><a href="single.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+															</div>
+														</div>
+													</article>
+												</div>
+											</div>
+										</div>								
+									</div>
+								</div>
+							</li>
+							<li class="dropdown magz-dropdown magz-dropdown-megamenu"><a href="#">Archives <i class="ion-ios-arrow-right"></i></a>
+								<div class="dropdown-menu megamenu">
+									<div class="megamenu-inner">
+										<div class="row">
+											<div class="col-md-3">
+												<h2 class="megamenu-title">Particuliers</h2>
+												<ul class="vertical-menu">
+													<li><a href="#">Borne Domicile</a></li>
+													<li><a href="#">Installation</a></li>
+													<li><a href="#">Maintenance</a></li>
+													<li><a href="#">Assistance 24/7</a></li>
+													<li><a href="#">Garantie</a></li>
+												</ul>
+											</div>
+											<div class="col-md-3">
+												<h2 class="megamenu-title">Entreprises</h2>
+												<ul class="vertical-menu">
+													<li><a href="#">Flotte Électrique</a></li>
+													<li><a href="#">Parking Privé</a></li>
+													<li><a href="#">Station Publique</a></li>
+													<li><a href="#">Gestion Centralisée</a></li>
+													<li><a href="#">Facturation</a></li>
+												</ul>
+											</div>
+											<div class="col-md-3">
+												<h2 class="megamenu-title">Services</h2>
+												<ul class="vertical-menu">
+													<li><a href="#">Application Mobile</a></li>
+													<li><a href="#">Carte de Recharge</a></li>
+													<li><a href="#">Localisation Bornes</a></li>
+													<li><a href="#">Réservation</a></li>
+													<li><a href="#">Support</a></li>
+												</ul>
+											</div>
+											<div class="col-md-3">
+												<h2 class="megamenu-title">Ressources</h2>
+												<ul class="vertical-menu">
+													<li><a href="#">Guide d'Achat</a></li>
+													<li><a href="#">FAQ</a></li>
+													<li><a href="#">Calculateur d'Autonomie</a></li>
+													<li><a href="#">Comparateur</a></li>
+													<li><a href="#">Blog</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="dropdown magz-dropdown"><a href="#">Mon Compte <i class="ion-ios-arrow-right"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="icon ion-person"></i> Mon Profil</a></li>
+									<li><a href="#"><i class="icon ion-heart"></i> Favoris</a></li>
+									<li><a href="#"><i class="icon ion-chatbox"></i> Commentaires</a></li>
+									<li><a href="#"><i class="icon ion-key"></i> Mot de Passe</a></li>
+									<li><a href="#"><i class="icon ion-settings"></i> Paramètres</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="icon ion-log-out"></i> Déconnexion</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End nav -->
+		</header>
+
+		<section class="home">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-12 col-xs-12">
+						<div class="headline">
+							<div class="nav" id="headline-nav">
+								<a class="left carousel-control" role="button" data-slide="prev">
+									<span class="ion-ios-arrow-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" role="button" data-slide="next">
+									<span class="ion-ios-arrow-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+							<div class="owl-carousel owl-theme" id="headline">							
+								<div class="item">
+									<a href="#"><div class="badge">Nouveau!</div> Le Maroc accélère sa transition vers la mobilité électrique</a>
+								</div>
+								<div class="item">
+									<a href="#">Nouvelles infrastructures de recharge en expansion</a>
+								</div>
+							</div>
+						</div>
+						<div class="text-center" style="padding: 60px 0; background: #f9f9f9;">
+							<i class="ion-ios-paper-outline" style="font-size: 64px; color: #ddd; margin-bottom: 20px; display: block;"></i>
+							<h3 style="color: #999;">Aucun article en vedette pour le moment</h3>
+							<p style="color: #bbb;">Le contenu sera bientôt disponible</p>
+						</div>
+						<div class="line">
+							<div>Dernières Actualités</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-center" style="padding: 60px 0;">
+								<i class="ion-ios-paper-outline" style="font-size: 48px; color: #ddd; margin-bottom: 15px; display: block;"></i>
+								<h4 style="color: #999;">Aucun article disponible</h4>
+								<p style="color: #bbb;">Le contenu sera ajouté prochainement</p>
+							</div>
+						</div>
+						<div class="banner">
+							<a href="#">
+								<img src="images/ads.png" alt="Sample Article">
+							</a>
+						</div>
+						<div class="line transparent little"></div>
+						<!-- Advertisement Space -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="banner" style="text-align: center; padding: 40px 0; background: #f5f5f5; margin-bottom: 30px;">
+									<h3 style="color: #999; margin-bottom: 20px;">ESPACE PUBLICITAIRE</h3>
+									<a href="#">
+										<img src="images/ads.png" alt="Advertisement Space" style="max-width: 100%;">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="line top">
+							<div>Plus d'articles</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-center" style="padding: 60px 0;">
+								<i class="ion-ios-paper-outline" style="font-size: 48px; color: #ddd; margin-bottom: 15px; display: block;"></i>
+								<h4 style="color: #999;">Aucun autre article disponible</h4>
+								<p style="color: #bbb;">Revenez bientôt pour plus de contenu</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-4 sidebar" id="sidebar">
+						<div class="sidebar-title for-tablet">Sidebar</div>
+						<!-- Advertisement Space -->
+						<aside>
+							<h1 class="aside-title">Publicité</h1>
+							<div class="aside-body">
+								<div style="text-align: center; padding: 40px 20px; background: #f5f5f5;">
+									<p style="color: #999; margin-bottom: 15px;">ESPACE PUBLICITAIRE</p>
+									<a href="#">
+										<img src="images/ads.png" alt="Advertisement" style="max-width: 100%;">
+									</a>
+								</div>
+							</div>
+						</aside>
+						<aside>
+							<h1 class="aside-title">Articles Populaires</h1>
+							<div class="aside-body text-center" style="padding: 40px 20px;">
+								<i class="ion-ios-paper-outline" style="font-size: 36px; color: #ddd; margin-bottom: 10px; display: block;"></i>
+								<p style="color: #999; margin: 0;">Aucun article populaire</p>
+							</div>
+						</aside>
+						<aside>
+							<div class="aside-body">
+								<form class="newsletter">
+									<div class="icon">
+										<i class="ion-ios-email-outline"></i>
+										<h1>Newsletter</h1>
+									</div>
+									<div class="input-group">
+										<input type="email" class="form-control email" placeholder="Your mail">
+										<div class="input-group-btn">
+											<button class="btn btn-primary"><i class="ion-paper-airplane"></i></button>
+										</div>
+									</div>
+									<p>By subscribing you will receive new articles in your email.</p>
+								</form>
+							</div>
+						</aside>
+						<!-- Advertisement Space -->
+						<aside>
+							<h1 class="aside-title">Publicité</h1>
+							<div class="aside-body">
+								<div style="text-align: center; padding: 40px 20px; background: #f5f5f5;">
+									<p style="color: #999; margin-bottom: 15px;">ESPACE PUBLICITAIRE</p>
+									<a href="#">
+										<img src="images/ads.png" alt="Advertisement" style="max-width: 100%;">
+									</a>
+								</div>
+							</div>
+						</aside>
+						<aside id="sponsored">
+							<h1 class="aside-title">Sponsored</h1>
+							<div class="aside-body">
+								<ul class="sponsored">
+									<li>
+										<a href="#">
+											<img src="images/sponsored.png" alt="Sponsored">
+										</a>
+									</li> 
+									<li>
+										<a href="#">
+											<img src="images/sponsored.png" alt="Sponsored">
+										</a>
+									</li> 
+									<li>
+										<a href="#">
+											<img src="images/sponsored.png" alt="Sponsored">
+										</a>
+									</li> 
+									<li>
+										<a href="#">
+											<img src="images/sponsored.png" alt="Sponsored">
+										</a>
+									</li> 
+								</ul>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Advertisement Banner Section -->
+		<section style="background: #f9f9f9; padding: 60px 0;">
+			<div class="container">
+				<h1 style="text-align: center; margin-bottom: 30px; color: #999;">ESPACE PUBLICITAIRE</h1>
+				<div style="text-align: center;">
+					<a href="#">
+						<img src="images/ads.png" alt="Advertisement Banner" style="max-width: 100%;">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Start footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="block">
+							<h1 class="block-title">À Propos</h1>
+							<div class="block-body">
+								<figure class="foot-logo">
+									<img src="images/logo-light.png" class="img-responsive" alt="Logo">
+								</figure>
+								<p class="brand-description">
+									Votre magazine d'actualités, de lifestyle et de culture. Restez informé de toutes les nouveautés.
+								</p>
+								<a href="page.html" class="btn btn-magz white">En Savoir Plus <i class="ion-ios-arrow-thin-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="block">
+							<h1 class="block-title">Tags Populaires <div class="right"><a href="#">Voir Tout <i class="ion-ios-arrow-thin-right"></i></a></div></h1>
+							<div class="block-body">
+								<ul class="tags">
+									<li><a href="#">Véhicules Électriques</a></li>
+									<li><a href="#">Bornes de Recharge</a></li>
+									<li><a href="#">Tesla</a></li>
+									<li><a href="#">Autonomie</a></li>
+									<li><a href="#">Subventions</a></li>
+									<li><a href="#">Énergie Propre</a></li>
+									<li><a href="#">Mobilité Durable</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="block">
+							<h1 class="block-title">Newsletter</h1>
+							<div class="block-body">
+								<p>Abonnez-vous pour recevoir nos dernières actualités par email.</p>
+								<form class="newsletter">
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="ion-ios-email-outline"></i>
+										</div>
+										<input type="email" class="form-control email" placeholder="Votre email">
+									</div>
+									<button class="btn btn-primary btn-block white">S'abonner</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="block">
+							<h1 class="block-title">Derniers Articles</h1>
+							<div class="block-body">
+								<article class="article-mini">
+									<div class="inner">
+										<figure>
+											<a href="single.html">
+												<img src="images/news/img12.jpg" alt="Sample Article">
+											</a>
+										</figure>
+										<div class="padding">
+											<h1><a href="single.html">Donec consequat lorem quis augue pharetra</a></h1>
+										</div>
+									</div>
+								</article>
+								<article class="article-mini">
+									<div class="inner">
+										<figure>
+											<a href="single.html">
+												<img src="images/news/img14.jpg" alt="Sample Article">
+											</a>
+										</figure>
+										<div class="padding">
+											<h1><a href="single.html">eu dapibus risus aliquam etiam ut venenatis</a></h1>
+										</div>
+									</div>
+								</article>
+								<article class="article-mini">
+									<div class="inner">
+										<figure>
+											<a href="single.html">
+												<img src="images/news/img15.jpg" alt="Sample Article">
+											</a>
+										</figure>
+										<div class="padding">
+											<h1><a href="single.html">Nulla facilisis odio quis gravida vestibulum </a></h1>
+										</div>
+									</div>
+								</article>
+								<article class="article-mini">
+									<div class="inner">
+										<figure>
+											<a href="single.html">
+												<img src="images/news/img16.jpg" alt="Sample Article">
+											</a>
+										</figure>
+										<div class="padding">
+											<h1><a href="single.html">Proin venenatis pellentesque arcu vitae </a></h1>
+										</div>
+									</div>
+								</article>
+								<a href="#" class="btn btn-magz white btn-block">See All <i class="ion-ios-arrow-thin-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-12 col-sm-6">
+						<div class="block">
+							<h1 class="block-title">Follow Us</h1>
+							<div class="block-body">
+								<p>Follow us and stay in touch to get the latest news</p>
+								<ul class="social trp">
+									<li>
+										<a href="#" class="facebook">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="twitter">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-twitter-outline"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="youtube">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-youtube-outline"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="googleplus">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-googleplus"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="instagram">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-instagram-outline"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="tumblr">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-tumblr"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="dribbble">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-dribbble"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="linkedin">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-linkedin"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="skype">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-skype"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="rss">
+											<svg><rect width="0" height="0"/></svg>
+											<i class="ion-social-rss"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="block">
+							<div class="block-body no-margin">
+								<ul class="footer-nav-horizontal">
+									<li><a href="index.html">Accueil</a></li>
+									<li><a href="#">Partenaires</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="page.html">À Propos</a></li>
+									<li><a href="#">Carrières</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyright">
+							COPYRIGHT &copy; MAGAZINE 2025. TOUS DROITS RÉSERVÉS.
+							<div>
+								Votre source d'information <i class="ion-heart"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer -->
+
+		<!-- JS -->
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.migrate.js"></script>
+		<script src="scripts/bootstrap/bootstrap.min.js"></script>
+		<script>var $target_end=$(".best-of-the-week");</script>
+		<script src="scripts/jquery-number/jquery.number.min.js"></script>
+		<script src="scripts/owlcarousel/dist/owl.carousel.min.js"></script>
+		<script src="scripts/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<script src="scripts/easescroll/jquery.easeScroll.js"></script>
+		<script src="scripts/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="scripts/toast/jquery.toast.min.js"></script>
+		<script src="js/demo.js"></script>
+		<script src="js/e-magz.js"></script>
+	</body>
+</html>
