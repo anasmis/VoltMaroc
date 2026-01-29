@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  # Magazine Frontend
+  magazine-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: evplug-magazine-frontend
+    ports:
+      - "8080:80"
+    environment:
+      # Strapi Configuration
+      STRAPI_API_URL: ${STRAPI_API_URL:-https://management.evborne.ma}
+      STRAPI_API_TOKEN: ${STRAPI_API_TOKEN}
+      
+      # Pagination Settings
+      ARTICLES_PER_PAGE: ${ARTICLES_PER_PAGE:-10}
+      HOMEPAGE_FEATURED: ${HOMEPAGE_FEATURED:-6}
+      SIDEBAR_RECENT: ${SIDEBAR_RECENT:-5}
+      DEFAULT_LANGUAGE: ${DEFAULT_LANGUAGE:-fr}
+    restart: unless-stopped
+    networks:
+      - magazine-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/index.html"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "com.evplug.app=magazine"
+      - "com.evplug.environment=production"
+
+  # Optional: Nginx reverse proxy (if you want SSL termination)
+  # Uncomment if you need HTTPS support
+  # nginx-proxy:
+  #   image: nginx:alpine
+  #   container_name: evplug-nginx-proxy
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx-proxy.conf:/etc/nginx/nginx.conf:ro
+  #     - ./ssl:/etc/nginx/ssl:ro
+  #   depends_on:
+  #     - magazine-frontend
+  #   restart: unless-stopped
+  #   networks:
+  #     - magazine-network
+
+networks:
+  magazine-network:
+    driver: bridge
+
+# Optional: If you want to include Strapi backend in the same docker-compose
+# Uncomment the sections below
+
+# services:
+#   strapi:
+#     image: strapi/strapi:latest
+#     container_name: evplug-strapi
+#     environment:
+#       DATABASE_CLIENT: postgres
+#       DATABASE_HOST: postgres
+#       DATABASE_PORT: 5432
+#       DATABASE_NAME: strapi
+#       DATABASE_USERNAME: strapi
+#       DATABASE_PASSWORD: ${DB_PASSWORD}
+#       JWT_SECRET: ${JWT_SECRET}
+#       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+#       APP_KEYS: ${APP_KEYS}
+#       API_TOKEN_SALT: ${API_TOKEN_SALT}
+#     ports:
+#       - "1337:1337"
+#     volumes:
+#       - strapi-data:/srv/app
+#     depends_on:
+#       - postgres
+#     restart: unless-stopped
+#     networks:
+#       - magazine-network
+#
+#   postgres:
+#     image: postgres:15-alpine
+#     container_name: evplug-postgres
+#     environment:
+#       POSTGRES_DB: strapi
+#       POSTGRES_USER: strapi
+#       POSTGRES_PASSWORD: ${DB_PASSWORD}
+#     volumes:
+#       - postgres-data:/var/lib/postgresql/data
+#     restart: unless-stopped
+#     networks:
+#       - magazine-network
+
+# volumes:
+#   strapi-data:
+#   postgres-data:
